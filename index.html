@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/sidebar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -20,6 +21,27 @@
     <title>To-Do-List</title>
   </head>
   <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="https://www.linkedin.com/in/samuel--gonçalves/" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://github.com/StkaaPa"> <i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/samuel.goncalves.9619/" target="_blank"
+        ><i class="fab fa-facebook"></i
+      ></a>
+      <a href="https://www.instagram.com/samthekid.99/" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://twitter.com/Samthekid99" target="_blank"
+        ><i class="fab fa-twitter"></i
+      ></a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">
+        <i class="fas fa-bars"></i> Contact
+      </button>
+    </div>
     <header>
       <h1>My To-Do-List For Today</h1>
     </header>
@@ -41,4 +63,16 @@
     </div>
   </body>
   <script src="/app.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "85px";
+      document.getElementById("main").style.marginLeft = "85px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
 </html>
